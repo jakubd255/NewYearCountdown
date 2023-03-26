@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>New Year Countdown</title>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <script src="timer.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-fireworks@2/tsparticles.preset.fireworks.bundle.min.js"></script>
+    </head>
+
+    <body onload="init()">
+        <div id="container">
+            <div id="countdown">
+                <h1 id="title">Countdown to New Year</h1>
+
+                <div id="time-blocks">
+                    <div class="time-block" id="days-parent">
+                        <div class="time-duration" id="days">D</div>
+                        <div class="time-unit">Days</div>
+                    </div>
+                    <div class="time-block" id="hours-parent">
+                        <div class="time-duration" id="hours">H</div>
+                        <div class="time-unit">Hours</div>
+                    </div>
+                    <div class="time-block" id="minutes-parent">
+                        <div class="time-duration" id="minutes">M</div>
+                        <div class="time-unit">Minutes</div>
+                    </div>
+                    <div class="time-block" id="seconds-parent">
+                        <div class="time-duration" id="seconds">S</div>
+                        <div class="time-unit">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tsparticles"></div>
+    </body>
+</html>

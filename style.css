@@ -1,0 +1,132 @@
+body
+{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1f20;
+    color: white;
+    font-family: sans-serif;
+}
+img{opacity: 0;}
+
+#container
+{
+    z-index: 1;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+}
+
+#countdown
+{
+   display: flex;
+   flex-direction: column;
+   height: 330px;
+}
+
+#title
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 5em;
+    text-align: center;
+    text-shadow: 1px 1px 7px rgba(255, 255, 255, 1);
+}
+
+#time-blocks
+{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.time-block
+{
+    position: relative;
+    padding: 0.3em;
+    min-width: 9em;
+    max-width: 12em;
+    height: 14em;
+    border-radius: 1.5em;
+    background-color: #41424c;
+    border: 4px solid white;
+}
+
+.time-block-last
+{
+    width: 12em;
+    height: 16em;
+}
+
+.time-block-last .time-duration{font-size: 9em;}
+
+.time-block-last .time-unit{font-size: 2em;}
+
+.time-duration
+{
+    margin-top: 0.1em;
+    text-align: center;
+    font-size: 7em;
+}
+
+.time-unit
+{
+    position: absolute;
+    bottom: 0.3em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+}
+
+
+@media only screen and (max-width: 500px)
+{
+    #title{font-size: 3em;}
+
+    #time-blocks
+    {
+        width: 100%;
+        gap: 0.3em;
+    }
+
+    .time-block
+    {
+        min-width: 0em;
+        width: 5.5em;
+        height: 7em;
+        border-radius: 0.75em;
+        border: 2px solid white;
+        gap: 1em;
+        padding: 0em;
+    }
+
+    .time-block-last
+    {
+        min-width: 9em;
+        height: 14em;
+        border-radius: 1em;
+        border: 3px solid white;
+    }
+
+    .time-block-last .time-duration
+    {
+        margin-top: 0.1em !important;
+        font-size: 2em;
+    }
+    .time-block-last .time-unit{font-size: 1em;}
+
+    .time-duration
+    {
+        margin-top: 0em !important;
+        font-size: 3em;
+        margin-top: 0.3em;
+    }
+
+    .time-unit{font-size: 1em;}
+}
